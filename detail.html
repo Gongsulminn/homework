@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+
+
+        function getUrlParams() {
+          var params = {};
+          window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
+          return params;
+        }
+
+        function getUrlImg(number) {
+          switch(number) {
+            case "20":
+              return "images/20.jpg";
+            case "21":
+              return "images/21.jpg";
+            case "23":
+              return "images/23.jpg";
+            case "24":
+              return "images/24.jpg";
+            case "25":
+              return "images/25.jpg";
+          }
+        }
+
+        function checkAnswer(answer) {
+          let number = getUrlParams().number;
+          if (number == 20) {
+            if (answer == 1) {
+              alert("정답입니다.")
+            }else {
+              alert("오답입니다.")
+            }
+          }else if (number == 21) {
+            if (answer == 1) {
+              alert("정답입니다.")
+            }else {
+              alert("오답입니다.")
+            }
+          }else if (number == 23) {
+            if (answer == 4) {
+              alert("정답입니다.")
+            }else {
+              alert("오답입니다.")
+            }
+          }else if (number == 24) {
+            if (answer == 1) {
+              alert("정답입니다.")
+            }else {
+              alert("오답입니다.")
+            }
+          }else if (number == 25) {
+            if (answer == 3) {
+              alert("정답입니다.")
+            }else {
+              alert("오답입니다.")
+            }
+          }
+        }
+
+        window.onload = function() {
+          let number = getUrlParams().number;
+          $(".question_img").attr("src", getUrlImg(number));
+        }
+
+    </script>
+  </head>
+  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main {
+            max-width: 67rem;
+        }
+        .main .question_img{
+            width: 30rem;
+            margin:0 auto;
+            margin-top:2rem;
+            align: center;
+        }
+
+        .main .questions{
+            width: 30rem;
+            align: center;
+        }
+
+        .main .questions{
+            width: 30rem;
+            align: center;
+        }
+
+        input[type=button]{
+          width: 50pt;
+          background-color: #f8585b;
+          border: none;
+          color:#fff;
+          padding: 15px 0;
+          text-align: center;
+          font-size: 15px;
+          margin: 4px;
+         }
+
+        @media (max-width:480px){
+          .main .question_img{
+            width: 20rem;
+          }
+
+          input[type=button]{
+             width: 25pt;
+             align: center;
+           }
+        }
+    </style>
+
+    <div class="wrapper">
+      <div class="main">
+        <img class="question_img">
+      </div>
+
+      <div class="quetions">
+        <input class="button" type="button" value="1번" onclick="checkAnswer(1)">
+        <input class="button" type="button" value="2번"  onclick="checkAnswer(2)">
+        <input class="button" type="button" value="3번"  onclick="checkAnswer(3)">
+        <input class="button" type="button" value="4번"  onclick="checkAnswer(4)">
+        <input class="button" type="button" value="5번"  onclick="checkAnswer(5)">
+      </div>
+
+    </div>
+
+  </body>
+</html>

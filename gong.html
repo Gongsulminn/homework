@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: black;
+      background-size: cover;
+      min-height: 100vh;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+    #header{
+      margin-top:2rem;
+      text-align: center;
+      color: black;
+      size: 2em;
+    }
+
+    #header h1,
+    #header h1 a {
+      color: white;
+      font-weight: 200;
+      font-size: 4rem;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    #main {
+      max-width: 67rem;
+      margin:0 auto;
+      margin-top:2rem;
+    }
+
+    #main .thumbnails {
+      display: flex;
+    }
+
+    #main .thumbnails div {
+      width: 100%;
+      margin: 0 0.3rem;
+      text-align: center;
+    }
+
+    #main .thumbnails a {
+      display: inline-block;
+      width: 100%;
+      margin: 0.6rem 0;
+    }
+
+    #main .thumbnails img {
+      width: 100%;
+      display: block;
+      border: 1px solid rgba(255, 255, 255, 0.21);
+      border-bottom: none;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+
+    #main .thumbnails a {
+      text-decoration: none;
+    }
+
+    #main .thumbnails h3 {
+      margin: 0;
+      font-size: 0.8rem;
+      font-weight: 200;
+      color: rgba(255, 255, 255, 0.82);
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.21);
+      border-top: none;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+
+    #wrapper{
+      padding:2rem;
+    }
+    @media (max-width:480px){
+      #main .thumbnails{
+        display: block;
+      }
+      #header h1 {
+        font-size: 1rem;
+      }
+    }
+
+  </style>
+  <div id="wrapper">
+    <header id="header">
+        <h1>2018년도 수능 영어 기출 문제
+    </header>
+    <main id="main">
+      <section class="thumbnails">
+        <div>
+          <a href="detail.html?number=20">
+            <img src="images/20.jpg">
+            <h3> 20번 문제 </h3>
+          </a>
+          <a href="detail.html?number=21">
+            <img src="images/21.jpg">
+            <h3>21번 문제</h3>
+          </a>
+        </div>
+        <div>
+          <a href="detail.html?number=23">
+            <img src="images/23.jpg">
+            <h3>23번 문제</h3>
+          </a>
+          <a href="detail.html?number=24">
+            <img src="images/24.jpg">
+            <h3>24번 문제</h3>
+          </a>
+        </div>
+        <div>
+          <a href="detail.html?number=25">
+            <img src="images/25.jpg">
+            <h3>25번 문제</h3>
+          </a>
+
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
